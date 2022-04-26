@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>интукод</title>
+</head>
+<body>
+<div id="main">
+    <ul id="list">
+        <li>html</li>
+        <li>css</li>
+    </ul>
+</div>
+<div id="copyright">(c) INTOCODE</div>
+<script>
+    const addTitle = () => {
+        const body = document.body;
+
+        const h1 = document.createElement("h1");
+        h1.textContent = "Работа с DOM";
+
+        return body.prepend(h1);
+    }
+
+    const addLink = () => {
+        const main = document.querySelector("#main");
+
+        const a = document.createElement("a");
+        a.href = "https://learn.javascript.ru/basic-dom-node-properties";
+        a.textContent = "DOM";
+
+        return main.append(a);
+    }
+
+    const changeColor = (color) => {
+        const body = document.body;
+
+        return body.style.backgroundColor = color;
+    }
+
+    const addLiText = (text) => {
+        const ul = document.querySelector("#list");
+
+        const li = document.createElement("li");
+        li.textContent = text;
+
+        return ul.append(li);
+    }
+
+    const deleteCopy = () => {
+        const copyright = document.querySelector("#copyright");
+
+        return copyright.remove();
+    }
+</script>
+</body>
+</html>
